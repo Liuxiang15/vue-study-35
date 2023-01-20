@@ -20,7 +20,16 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    children: [
+      {
+        // 事实上这里只需要写/info，会自动拼接父级的路径
+        path: '/about/info',
+        component: {
+          render (h) {return h('div', 'info page') }
+        }
+      }
+    ]
   }
 ]
 

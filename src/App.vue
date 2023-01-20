@@ -7,6 +7,7 @@
     <!-- 访问全局状态 -->
     <p @click="$store.commit('add')">{{$store.state.counter}}</p>
     <p @click="$store.dispatch('add')">{{$store.state.counter}}</p>
+    <!-- <p>double： {{$store.getters.doubleCounter}}</p> -->
     <!-- 路由出口 -->
     <!-- 承载内容容器 -->
     <router-view/>

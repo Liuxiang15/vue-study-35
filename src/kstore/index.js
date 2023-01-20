@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 import Vue from 'vue'
 import Vuex from './kvuex'
 
@@ -21,4 +22,10 @@ export default new Vuex.Store({
       }, 1000);
     }
   },
+  getters: {
+    doubleCounter(state) { // 计算剩余数量
+    	// eslint-disable-next-line no-mixed-spaces-and-tabs
+    	return state.counter * 2;
+    }
+  }
 })
